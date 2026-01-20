@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0516af7-8999-40c0-a6e6-38aef8be41a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lerningOops/claudeQuestions/Test3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +40,8 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Test3 (1)">
-    <configuration name="Test2 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Test2 (1)">
+    <configuration name="Test2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lerningOops.claudeQuestions.Test2" />
       <module name="OOPS" />
       <extension name="coverage">
@@ -58,7 +54,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Test2 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lerningOops.claudeQuestions.Test2" />
       <module name="OOPS" />
       <extension name="coverage">
@@ -112,11 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test2 (1)" />
         <item itemvalue="Application.Test3 (1)" />
         <item itemvalue="Application.Test3" />
         <item itemvalue="Application.com.lerningOops.claudeQuestions.Test1 (1)" />
         <item itemvalue="Application.Test2 (2)" />
-        <item itemvalue="Application.Test2" />
       </list>
     </recent_temporary>
   </component>
