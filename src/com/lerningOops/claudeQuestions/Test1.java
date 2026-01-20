@@ -1,4 +1,4 @@
-package BasicOopsClaude;
+package com.lerningOops.claudeQuestions;
 
 /*
 *  Create a Simple Class
@@ -6,62 +6,99 @@ package BasicOopsClaude;
 *  Include a constructor and a method to display student details.
  */
 
-class Student{
-    private String name ;
-    private int age ;
-    private String rollNumber ;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
-    /*
-     Default constructor
-     */
-    Student(){
-        this("unkown" , 23 , "8621110");
-    }
+class Student {
+    private String name;
+    private int age;
+    final private String rollNumber;
 
-    /* Parameterized constructor
-       Constructor chaining
-     */
 
-    Student(String name , int age , String rollNumber){
-        this.name = name ;
-        this.age = age ;
-        this.rollNumber = rollNumber ;
-    }
+    Student(String name, int age, String rollNumber) {
 
-    // ======GETTERS AND SETTERS
+        // validation ::
+        validateName(name);
+        validateAge(age);
+        validateRollNumber(rollNumber);
 
-    public void setName(String name ){
-        this.name = name ;
-    }
-    public void setAge(int age ){
-        this.age = age ;
-    }
-    public void setRollNumber(String rollNumber){
+        this.name = name.trim();
+        this.age = age;
         this.rollNumber = rollNumber;
     }
 
-    public String getName(){
-        return name ;
+    // ====================GETTERS AND SETTERS=========================
+
+    public void setName(String name) {
+        validateName(name);
+        this.name = name.trim();
     }
-    public int getAge(){
-        return age ;
+
+    public void setAge(int age) {
+        validateAge(age);
+        this.age = age;
     }
-    public String getRollNumber(){
+
+
+
+
+    // ========== Validation code ========================================
+    private static void validateName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name can not be empty");
+        }
+    }
+
+    private static void validateAge(int age) {
+        if (age < 0 || age > 120) {
+            throw new IllegalArgumentException("Age should be between 0 and 120 ");
+        }
+    }
+
+    private static void validateRollNumber(String rollNumber) {
+        if (rollNumber == null || !(rollNumber.matches("\\d{7,10}"))) {
+            throw new IllegalArgumentException("roll Number should be in right format");
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getRollNumber() {
         return rollNumber;
     }
 
-    // printing all details by overriding the toStirng method
+    public boolean equals(Object student){
+        if(student == this ) return true  ;
+        if(!(student instanceof Student)) return false ;
+
+        Student st = (Student) student ;
+        return this.rollNumber.equals(st.rollNumber);
+    }
+
+    public int hashCode(){
+        return Objects.hashCode(rollNumber);
+    }
 
     public String toString(){
-        return String.format("Name: %s\nAge: %d\nRoll Number: %s\n", name , age , rollNumber);
+        return String.format("Name: %s\n" +
+                             "Roll Number: %s\n" +
+                             "Age: %d\n", name , rollNumber, age);
     }
-
 }
-public class Test1 {
-
+public class Test1{
     public static void main(String[] args) {
-        Student st = new Student("Deepak", 23 , "2021218207");
+        Student st = new Student("winkle", 78, "96453258");
         System.out.println(st);
+        Set<Student> students = new HashSet<>();
+        students.add(new Student("Deepak", 21, "7895655"));
+        students.add(new Student("Deepak", 21, "7895655"));
+        System.out.println(students.size());
     }
-
 }
